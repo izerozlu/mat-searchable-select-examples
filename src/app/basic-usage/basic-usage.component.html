@@ -1,0 +1,13 @@
+<h4 class="basic-usage__title">Basic Usage</h4>
+<mat-searchable-select (changed)="selectedItem = $event.nextValue">
+  <mat-searchable-select-label>Lorem Words</mat-searchable-select-label>
+  <mat-searchable-select-search-label>Search</mat-searchable-select-search-label>
+  <mat-searchable-select-list [options]="options">
+    <ng-template matSearchableSelectOption
+                 let-option="option">
+      {{option}}
+    </ng-template>
+  </mat-searchable-select-list>
+</mat-searchable-select>
+
+<p>Selected Item: {{selectedItem}}</p>
