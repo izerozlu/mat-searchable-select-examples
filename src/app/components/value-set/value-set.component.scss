@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.value-set__title {
+  margin-bottom: 0;
+}
+
+.value-set__sub-title {
+  margin-bottom: 0;
+}
+
+.value-set__toggle-group {
+  width: min-content;
+  margin-bottom: 16px;
+}
