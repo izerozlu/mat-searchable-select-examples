@@ -1,9 +1,5 @@
 <h4 class="async-data__title">Async Data</h4>
 
-<button mat-raised-button
-        (click)="intervalSubscription ? stopInterval() : startInterval()">
-  {{intervalSubscription ? 'Stop' : 'Start'}} Interval
-</button>
 <mat-searchable-select [is-loading]="loading" (changed)="selectedItem = $event.nextValue">
   <mat-searchable-select-label>Lorem Words</mat-searchable-select-label>
   <mat-searchable-select-search-label>Search</mat-searchable-select-search-label>
@@ -14,10 +10,21 @@
     </ng-template>
   </mat-searchable-select-list>
 </mat-searchable-select>
-
 <p>Selected Item: {{selectedItem}}</p>
+<button mat-raised-button
+        [disabled]="loading"
+        (click)="intervalSubscription ? stopInterval() : startInterval()">
+  <ng-container [ngSwitch]="loading">
+    <ng-container *ngSwitchCase="false">
+      {{intervalSubscription ? 'Stop' : 'Start'}} Interval
+    </ng-container>
+    <ng-container *ngSwitchCase="true">
+      Fetching..
+    </ng-container>
+  </ng-container>
+</button>
 <p *ngIf="countdownSubscription">
-  Until Fetch: {{remainingSeconds}}
+  Remaining time to fetch: {{remainingSeconds}}
   <ng-container [ngPlural]="remainingSeconds">
     <ng-template ngPluralCase="=1">second</ng-template>
     <ng-template ngPluralCase="other">seconds</ng-template>

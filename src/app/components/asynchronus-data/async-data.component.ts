@@ -11,8 +11,8 @@ import {Subscription, timer} from "rxjs";
 export class AsyncDataComponent implements OnDestroy {
   selectedItem: string;
   options: string[] = [];
-  loading: boolean;
-  remainingSeconds = 3;
+  loading = false;
+  remainingSeconds;
   private intervalSubscription: Subscription;
   private countdownSubscription: Subscription;
 
@@ -31,20 +31,22 @@ export class AsyncDataComponent implements OnDestroy {
   }
 
   async fetchData() {
+    this.stopInterval();
     this.loading = true;
     const url = 'https://baconipsum.com/api/?type=meat-and-filler&paras=1&sentences=2';
     const result: string[] = await this.httpClient.get<string[]>(url).pipe(delay(1500)).toPromise();
     this.options = result[0].split(' ');
     this.loading = false;
+    this.startInterval()
   }
 
   startInterval() {
     this.intervalSubscription = timer(0, 3000).subscribe(() => this.fetchData());
     this.countdownSubscription = timer(0, 1000).subscribe(() => {
-      if (this.remainingSeconds-- === 0) {
+      if (--this.remainingSeconds === 0) {
         this.remainingSeconds = 3;
       }
-    })
+    });
   }
 
   stopInterval() {
