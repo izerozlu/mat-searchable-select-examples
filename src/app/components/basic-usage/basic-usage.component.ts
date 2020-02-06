@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
 
 const defaultOptions = [
   'ex',
@@ -21,7 +20,6 @@ const defaultOptions = [
 })
 export class BasicUsageComponent implements OnInit {
 
-  formControl = new FormControl();
   options: string[] = defaultOptions;
   selectedItem: string;
 
@@ -29,9 +27,5 @@ export class BasicUsageComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  handleSearchChange(searchQuery: string) {
-    this.options = defaultOptions.filter((option: string) => option.includes(searchQuery));
   }
 }

@@ -1,5 +1,5 @@
-<h4 class="form-control__title demo-title">Form Control</h4>
-<mat-searchable-select [formControl]="formControl" (changed)="selectedItem = $event.nextValue">
+<h4 class="filter-highlight__title demo-title">Highlight Filtering</h4>
+<mat-searchable-select highlight>
   <mat-searchable-select-label>Lorem Words</mat-searchable-select-label>
   <mat-searchable-select-search-label>Search</mat-searchable-select-search-label>
   <mat-searchable-select-list [options]="options">
@@ -9,6 +9,3 @@
     </ng-template>
   </mat-searchable-select-list>
 </mat-searchable-select>
-
-<p>Selected Item: {{selectedItem}}</p>
-<p>Form Control Value: {{formControl.value}}</p>

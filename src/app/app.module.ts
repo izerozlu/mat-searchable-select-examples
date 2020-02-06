@@ -10,9 +10,9 @@ import {MatDividerModule} from '@angular/material/divider';
 import {ValueSetComponent} from './components/value-set/value-set.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {FormControlComponent} from './components/form-control/form-control.component';
-import {AsyncDataComponent} from './components/asynchronus-data/async-data.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatButtonModule} from "@angular/material/button";
+import { FilterHighlightComponent } from './components/filter-highlight/filter-highlight.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import {MatButtonModule} from "@angular/material/button";
     BasicUsageComponent,
     ValueSetComponent,
     FormControlComponent,
-    AsyncDataComponent
+    FilterHighlightComponent
   ],
   imports: [
     BrowserModule,
