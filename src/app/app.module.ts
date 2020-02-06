@@ -14,6 +14,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {FilterHighlightComponent} from './components/filter-highlight/filter-highlight.component';
 import {AsynchronousFetchComponent} from "./components/asynchronous-fetch/asynchronous-fetch.component";
 import {GivingValueComponent} from "./components/giving-value/giving-value.component";
+import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
 
 @NgModule({
   declarations: [
@@ -34,9 +35,19 @@ import {GivingValueComponent} from "./components/giving-value/giving-value.compo
     MatSearchableSelectModule,
     MatDividerModule,
     MatButtonToggleModule,
-    MatButtonModule
+    MatButtonModule,
+    HighlightModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS, useValue: {
+        languages: {
+          xml: () => import('highlight.js/lib/languages/xml'),
+          typescript: () => import('highlight.js/lib/languages/typescript')
+        }
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
