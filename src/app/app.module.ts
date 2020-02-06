@@ -7,20 +7,22 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {BasicUsageComponent} from './components/basic-usage/basic-usage.component';
 import {MatSearchableSelectModule} from 'mat-searchable-select';
 import {MatDividerModule} from '@angular/material/divider';
-import {ValueSetComponent} from './components/value-set/value-set.component';
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {FormControlComponent} from './components/form-control/form-control.component';
 import {HttpClientModule} from "@angular/common/http";
 import {MatButtonModule} from "@angular/material/button";
-import { FilterHighlightComponent } from './components/filter-highlight/filter-highlight.component';
+import {FilterHighlightComponent} from './components/filter-highlight/filter-highlight.component';
+import {AsynchronousFetchComponent} from "./components/asynchronous-fetch/asynchronous-fetch.component";
+import {GivingValueComponent} from "./components/giving-value/giving-value.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicUsageComponent,
-    ValueSetComponent,
+    GivingValueComponent,
     FormControlComponent,
-    FilterHighlightComponent
+    FilterHighlightComponent,
+    AsynchronousFetchComponent
   ],
   imports: [
     BrowserModule,
