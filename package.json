@@ -6,9 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --prod",
-    "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "push-subtree": "git subtree-push dist/searchable-select-demo origin gh-pages"
   },
   "private": true,
   "dependencies": {
