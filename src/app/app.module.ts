@@ -19,6 +19,9 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatIconModule, MatIconRegistry} from "@angular/material/icon";
 import {MatTooltipModule} from "@angular/material/tooltip";
 
+const xml = () => import('highlight.js/lib/languages/xml');
+const typescript = () => import('highlight.js/lib/languages/typescript');
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,8 +51,8 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     {
       provide: HIGHLIGHT_OPTIONS, useValue: {
         languages: {
-          xml: () => import('highlight.js/lib/languages/xml'),
-          typescript: () => import('highlight.js/lib/languages/typescript')
+          xml,
+          typescript
         }
       }
     }
