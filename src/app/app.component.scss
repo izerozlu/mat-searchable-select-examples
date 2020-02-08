@@ -1,6 +1,53 @@
+@import "~@angular/material/theming";
+
 :host {
   display: block;
   padding: 32px;
-  width: 350px;
+}
+
+.examples {
+  max-width: 600px;
+
+  ::ng-deep {
+    .mat-tab-body-content {
+    }
+
+    .mat-tab-label {
+      min-width: 80px;
+    }
+  }
+}
+
+.examples__title {
+  margin: 8px 0;
+}
+
+.examples__container {
+  border: 1px solid rgba(0, 0, 0, .24);
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  @include mat-elevation(4);
+}
+
+.example {
+  ::ng-deep {
+    .mat-tab-body-content:hover {
+      .example__source-copier {
+        display: block;
+      }
+    }
+  }
+}
+
+.example__source {
+  font-family: "Roboto Mono", monospace;
+}
+
+.example__source-copier {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  display: none;
 }
 

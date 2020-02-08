@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 const defaultOptions = [
   'ex',
@@ -18,14 +18,11 @@ const defaultOptions = [
   templateUrl: './basic-usage.component.html',
   styleUrls: ['./basic-usage.component.scss']
 })
-export class BasicUsageComponent implements OnInit {
+export class BasicUsageComponent {
 
   options: string[] = defaultOptions;
   selectedItem: string;
 
   constructor() {
-  }
-
-  ngOnInit() {
   }
 }

@@ -1,4 +1,4 @@
-import {BrowserModule} from '@angular/platform-browser';
+import {BrowserModule, DomSanitizer} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -15,6 +15,9 @@ import {FilterHighlightComponent} from './components/filter-highlight/filter-hig
 import {AsynchronousFetchComponent} from "./components/asynchronous-fetch/asynchronous-fetch.component";
 import {GivingValueComponent} from "./components/giving-value/giving-value.component";
 import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatIconModule, MatIconRegistry} from "@angular/material/icon";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
     MatDividerModule,
     MatButtonToggleModule,
     MatButtonModule,
-    HighlightModule
+    HighlightModule,
+    MatTabsModule,
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [
     {
@@ -51,4 +57,11 @@ import {HIGHLIGHT_OPTIONS, HighlightModule} from "ngx-highlightjs";
   bootstrap: [AppComponent]
 })
 export class AppModule {
+
+  constructor(
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer
+  ) {
+    matIconRegistry.addSvgIcon('copy', domSanitizer.bypassSecurityTrustResourceUrl('assets/icons/copy.svg'));
+  }
 }

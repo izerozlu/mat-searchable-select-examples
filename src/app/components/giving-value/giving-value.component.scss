@@ -1,6 +1,7 @@
 :host {
   display: flex;
   flex-direction: column;
+  margin: 16px 0;
 }
 
 .value-set__sub-title {
@@ -10,4 +11,11 @@
 .value-set__toggle-group {
   width: min-content;
   margin-bottom: 16px;
+
+  ::ng-deep {
+    .mat-button-toggle-label-content {
+      line-height: 36px;
+      padding: 0 8px;
+    }
+  }
 }

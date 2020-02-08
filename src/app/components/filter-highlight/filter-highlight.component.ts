@@ -9,7 +9,6 @@ import {OPTIONS} from "../../constants/options";
 export class FilterHighlightComponent {
 
   public options = OPTIONS.slice(20, 30);
-  public searchQuery: string;
 
   constructor() {
   }

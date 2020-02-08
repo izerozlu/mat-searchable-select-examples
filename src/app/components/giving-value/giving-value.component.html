@@ -1,11 +1,9 @@
-<h4 class="value-set__title demo-title">Value Set</h4>
-<h5 class="value-set__sub-title demo-title">Change Given Value</h5>
+<h5 class="value-set__sub-title examples__title">Change Given Value</h5>
 <mat-button-toggle-group class="value-set__toggle-group" [value]="selectedItem" (change)="selectedItem = $event.value">
   <mat-button-toggle [value]="options[0]">{{options[0]}}</mat-button-toggle>
   <mat-button-toggle [value]="options[1]">{{options[1]}}</mat-button-toggle>
   <mat-button-toggle [value]="options[2]">{{options[2]}}</mat-button-toggle>
 </mat-button-toggle-group>
-
 <mat-searchable-select [value]="selectedItem" (changed)="selectedItem = $event.nextValue">
   <mat-searchable-select-label>Lorem Words</mat-searchable-select-label>
   <mat-searchable-select-search-label>Search</mat-searchable-select-search-label>
@@ -15,5 +13,6 @@
     </ng-template>
   </mat-searchable-select-list>
 </mat-searchable-select>
-
-<p>Selected Item: {{selectedItem}}</p>
+<ng-container *ngIf="selectedItem">
+  <p>Selected Item</p><code>{{selectedItem}}</code>
+</ng-container>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 @import '~highlight.js/styles/github.css';
 
 html, body {
@@ -6,9 +7,5 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-.demo-title {
-  margin-bottom: 8px;
+  font-family: "Roboto Mono", monospace;
 }

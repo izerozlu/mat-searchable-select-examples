@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 
-const defaultOptions = ['occaecat',
+const defaultOptions = [
+  'occaecat',
   'nostrud',
   'irure',
   'pariatur',

@@ -1,16 +1,113 @@
 <h2>mat-searchable-select demo</h2>
-<section class="examples">
-  <app-basic-usage></app-basic-usage>
-  <mat-divider class="demo__divider"></mat-divider>
-  <app-giving-value></app-giving-value>
-  <mat-divider class="demo__divider"></mat-divider>
-  <app-form-control></app-form-control>
-  <mat-divider class="demo__divider"></mat-divider>
-  <app-filter-highlight></app-filter-highlight>
-  <mat-divider class="demo__divider"></mat-divider>
-  <app-asynchronous-fetch></app-asynchronous-fetch>
-</section>
-<section class="codes">
-  <pre><code [highlight]="basicUsage.html"></code></pre>
-  <pre><code [highlight]="basicUsage.typescript"></code></pre>
-</section>
+<main class="examples">
+  <section class="examples__container">
+    <h4 class="examples__title">Basic Usage</h4>
+    <mat-tab-group class="examples__example example">
+      <mat-tab class="example__usage" label="Usage">
+        <app-basic-usage></app-basic-usage>
+      </mat-tab>
+      <mat-tab class="example__html" label="Html">
+        <pre class="example__source" [highlight]="basicUsage.html"></pre>
+        <button class="example__source-copier" mat-icon-button matTooltip="Copy"
+                (click)="copyToClipboard(basicUsage.html)">
+          <mat-icon class="examples__source-copy-icon" svgIcon="copy"></mat-icon>
+        </button>
+      </mat-tab>
+      <mat-tab class="example__typescript" label="Typescript">
+        <pre class="example__source" [highlight]="basicUsage.typescript"></pre>
+        <button class="example__source-copier" mat-icon-button matTooltip="Copy"
+                (click)="copyToClipboard(basicUsage.typescript)">
+          <mat-icon class="examples__source-copy-icon" svgIcon="copy"></mat-icon>
+        </button>
+      </mat-tab>
+    </mat-tab-group>
+  </section>
+  <section class="examples__container">
+    <h4 class="examples__title">Giving Value</h4>
+    <mat-tab-group class="examples__example example">
+      <mat-tab class="example__usage" label="Usage">
+        <app-giving-value></app-giving-value>
+      </mat-tab>
+      <mat-tab class="example__html" label="Html">
+        <pre class="example__source" [highlight]="givingValue.html"></pre>
+        <button class="example__source-copier" mat-icon-button matTooltip="Copy"
+                (click)="copyToClipboard(givingValue.html)">
+          <mat-icon class="examples__source-copy-icon" svgIcon="copy"></mat-icon>
+        </button>
+      </mat-tab>
+      <mat-tab class="example__typescript" label="Typescript">
+        <pre class="example__source" [highlight]="givingValue.typescript"></pre>
+        <button class="example__source-copier" mat-icon-button matTooltip="Copy"
+                (click)="copyToClipboard(givingValue.typescript)">
+          <mat-icon class="examples__source-copy-icon" svgIcon="copy"></mat-icon>
+        </button>
+      </mat-tab>
+    </mat-tab-group>
+  </section>
+  <section class="examples__container">
+    <h4 class="examples__title">Form Control</h4>
+    <mat-tab-group class="examples__example example">
+      <mat-tab class="example__usage" label="Usage">
+        <app-form-control></app-form-control>
+      </mat-tab>
+      <mat-tab class="example__html" label="Html">
+        <pre class="example__source" [highlight]="formControl.html"></pre>
+        <button class="example__source-copier" mat-icon-button matTooltip="Copy"
+                (click)="copyToClipboard(formControl.html)">
+          <mat-icon class="examples__source-copy-icon" svgIcon="copy"></mat-icon>
+        </button>
+      </mat-tab>
+      <mat-tab class="example__typescript" label="Typescript">
+        <pre class="example__source" [highlight]="formControl.typescript"></pre>
+        <button class="example__source-copier" mat-icon-button matTooltip="Copy"
+                (click)="copyToClipboard(formControl.typescript)">
+          <mat-icon class="examples__source-copy-icon" svgIcon="copy"></mat-icon>
+        </button>
+      </mat-tab>
+    </mat-tab-group>
+  </section>
+  <section class="examples__container">
+    <h4 class="examples__title">Filter Highlight</h4>
+    <mat-tab-group class="examples__example example">
+      <mat-tab class="example__usage" label="Usage">
+        <app-filter-highlight></app-filter-highlight>
+      </mat-tab>
+      <mat-tab class="example__html" label="Html">
+        <pre class="example__source" [highlight]="filterHighlight.html"></pre>
+        <button class="example__source-copier" mat-icon-button matTooltip="Copy"
+                (click)="copyToClipboard(filterHighlight.html)">
+          <mat-icon class="examples__source-copy-icon" svgIcon="copy"></mat-icon>
+        </button>
+      </mat-tab>
+      <mat-tab class="example__typescript" label="Typescript">
+        <pre class="example__source" [highlight]="filterHighlight.typescript"></pre>
+        <button class="example__source-copier" mat-icon-button matTooltip="Copy"
+                (click)="copyToClipboard(filterHighlight.typescript)">
+          <mat-icon class="examples__source-copy-icon" svgIcon="copy"></mat-icon>
+        </button>
+      </mat-tab>
+    </mat-tab-group>
+  </section>
+  <section class="examples__container">
+    <h4 class="examples__title">Asynchronous Fetch</h4>
+    <mat-tab-group class="examples__example example">
+      <mat-tab class="example__usage" label="Usage">
+        <app-asynchronous-fetch></app-asynchronous-fetch>
+      </mat-tab>
+      <mat-tab class="example__html" label="Html">
+        <pre class="example__source" [highlight]="asynchronousFetch.html"></pre>
+        <button class="example__source-copier" mat-icon-button matTooltip="Copy"
+                (click)="copyToClipboard(asynchronousFetch.html)">
+          <mat-icon class="examples__source-copy-icon" svgIcon="copy"></mat-icon>
+        </button>
+      </mat-tab>
+      <mat-tab class="example__typescript" label="Typescript">
+        <pre class="example__source" [highlight]="asynchronousFetch.typescript"></pre>
+        <button class="example__source-copier" mat-icon-button matTooltip="Copy"
+                (click)="copyToClipboard(asynchronousFetch.typescript)">
+          <mat-icon class="examples__source-copy-icon" svgIcon="copy"></mat-icon>
+        </button>
+      </mat-tab>
+    </mat-tab-group>
+  </section>
+</main>
